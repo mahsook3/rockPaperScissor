@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="/rockPaperScissor/style.css">
+    <script src="https://kit.fontawesome.com/f8e8c480d8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Rock Paper Scissor</h1>
+    <p>Pick any one</p>
+
+    <div class="hand" id="hand">
+        <div class="rock" id="rock" onclick="Play('Rock'); attempt+=1;"><i class="fa-solid fa-hand-back-fist fa-5x"></i>
+        </div>
+        <div class="paper" id="paper" onclick="Play('Paper'); attempt+=1;"><i class="fa-solid fa-hand fa-5x" ></i></div>
+        <div class="scissor" id="scissor" onclick="Play('Scissor'); attempt+=1;"><i class="fa-solid fa-hand-scissors fa-5x" ></i></div>
+    </div>
+    
+    <div id="result">
+    </div>
+
+    <div id="score">
+    </div>
+
+    <audio id="win">
+        <source src="/rockPaperScissor/win.mp3" type="audio/mpeg">
+
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="loss">
+        <source src="/rockPaperScissor/loss.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="tie">
+        <source src="/rockPaperScissor/tie.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="/rockPaperScissor/rps.js"></script>
+    <script>
+        let attempt=1;
+        let win=0,loss=0,tie=0;
+    </script>
+
+</body>
+</html>
