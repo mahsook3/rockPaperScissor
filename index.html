@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
-    <link rel="stylesheet" href="/rockPaperScissor/style.css">
+    <link rel="stylesheet" href="/style.css">
     <script src="https://kit.fontawesome.com/f8e8c480d8.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="header">
+        <div class="left">
+            <div class="retry" onclick="resetScore();"><i class="fa-solid fa-rotate-right fa-2x"></i></div>
+        </div>
+        <div class="right">
+            <div class="winCount"><i class="fa-solid fa-flag-checkered fa-2x"></i><div class="winNumber" id="winNumber">0</div></div>
+            <div class="lossCount"><i class="fa-solid fa-circle-xmark fa-2x"></i><div class="lossNumber" id="lossNumber">0</div></div>
+        </div>
+    </div>
     <h1>Rock Paper Scissor</h1>
+
+    <div class="computer">
+        <div class="robot" id="robot"><p>Let's Play with me</p><i class="fa-solid fa-robot fa-5x"></i>        
+    </div>
     <p>Pick any one</p>
 
     <div class="hand" id="hand">
-        <div class="rock" id="rock" onclick="Play('Rock'); attempt+=1;"><i class="fa-solid fa-hand-back-fist fa-5x"></i>
+        <div class="rock" id="rock" onclick="Play('Rock'); score.attempt+=1;"><i class="fa-solid fa-hand-back-fist fa-5x"></i>
         </div>
-        <div class="paper" id="paper" onclick="Play('Paper'); attempt+=1;"><i class="fa-solid fa-hand fa-5x" ></i></div>
-        <div class="scissor" id="scissor" onclick="Play('Scissor'); attempt+=1;"><i class="fa-solid fa-hand-scissors fa-5x" ></i></div>
+        <div class="paper" id="paper" onclick="Play('Paper'); score.attempt+=1;"><i class="fa-solid fa-hand fa-5x" ></i></div>
+        <div class="scissor" id="scissor" onclick="Play('Scissor'); score.attempt+=1;"><i class="fa-solid fa-hand-scissors fa-5x" ></i></div>
     </div>
     
     <div id="result">
@@ -25,23 +38,27 @@
     </div>
 
     <audio id="win">
-        <source src="/rockPaperScissor/win.mp3" type="audio/mpeg">
+        <source src="/win.mp3" type="audio/mpeg">
 
         Your browser does not support the audio element.
     </audio>
     <audio id="loss">
-        <source src="/rockPaperScissor/loss.mp3" type="audio/mpeg">
+        <source src="/loss.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     <audio id="tie">
-        <source src="/rockPaperScissor/tie.mp3" type="audio/mpeg">
+        <source src="/tie.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <script src="/rockPaperScissor/rps.js"></script>
+    <script src="/rps.js"></script>
     <script>
-        let attempt=1;
-        let win=0,loss=0,tie=0;
+        // let attempt=1;
+        // let score={
+        //     win : 0,
+        //     loss : 0,
+        //     tie : 0
+        // }
     </script>
 
 </body>
